@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>WiV Portal [demo]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="main.dart.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+      <!--sidebar-->
+      <nav id="sidebar">
+          <div class="sidebar-header">
+              <img src="../images/Logo-WiV.png">
+          </div>
+          <ul class="list-unstyled components">
+              <li id="dashboard-sb">
+                  <a href="#"> <i class="material-icons">explore</i><i class="material-icons icons-right">chevron_right</i>Dashboard</a>
+              </li>
+              <li id="create-sb">
+                  <a href="#"> <i class="material-icons">create</i><i class="material-icons icons-right">chevron_right </i>Create/Edit </a>
+              </li>
+              <li>
+                  <a href="#" data-toggle="collapse" data-target="#purchase-sb"><i class="material-icons">shopping_cart </i><i class="material-icons icons-right">chevron_right</i>Purchase Proposal</a>
+                  <div id="purchase-sb" class="collapse">
+                      <div class="sidebar-sub-menu" id="buy-sb">
+                          <a href="#"> <i class="material-icons">add_shopping_cart</i><i class="material-icons icons-right">chevron_right</i>Buy</a>
+                      </div>
+                      <div class="sidebar-sub-menu" id="sell-sb">
+                          <a href="#"> <i class="material-icons">shopping_cart</i><i class="material-icons icons-right">chevron_right</i>Sell</a>
+                      </div>
+                  </div>
+              </li>
+              <li id="analrep-sb">
+                  <a href="#"><i class="material-icons">timeline </i><i class="material-icons icons-right">chevron_right</i>Analysis/Reporting</a>
+              </li>
+              <li id="tracktrace-sb">
+                  <a href="#"><i class="material-icons">track_changes </i><i class="material-icons icons-right">chevron_right</i>Track & trace</a>
+              </li>
+          </ul>
+      </nav>
+      <!--page content-->
+      <div id="nav-wrapper">
+          <nav class="navbar navbar-dark navbar-expand-lg">
+              <img class="navbar-brand" src="../images/Logo-WiV.png">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                  <ul class="navbar-nav mr-auto wiv-navbar-menu">
+                      <li id="dashboard-nb">
+                          <a href="#"> <i class="material-icons">explore</i><i class="material-icons icons-right">chevron_right</i>Dashboard</a>
+                      </li>
+                      <li id="create-nb">
+                          <a href="#"> <i class="material-icons">create</i><i class="material-icons icons-right">chevron_right </i>Create/Edit </a>
+                      </li>
+                      <li class="sidebar-sub-menu" id="buy-nb">
+                          <a href="#"> <i class="material-icons">add_shopping_cart</i><i class="material-icons icons-right">chevron_right</i>Buy</a>
+                      </li>
+                      <li class="sidebar-sub-menu" id="sell-nb">
+                          <a href="#"> <i class="material-icons">shopping_cart</i><i class="material-icons icons-right">chevron_right</i>Sell</a>
+                      </li>
+                      <li id="analrep-nb">
+                          <a href="#"><i class="material-icons">timeline </i><i class="material-icons icons-right">chevron_right</i>Analysis/Reporting</a>
+                      </li>
+                      <li id="tracktrace-nb">
+                          <a href="#"><i class="material-icons">track_changes </i><i class="material-icons icons-right">chevron_right</i>Track & trace</a>
+                      </li>
+                  </ul>
+
+                  <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                  <span class="navbar-nav mr-auto">
+                      <span class="bolder-text">Balance: $10000</span>
+                  </span>
+                  <span class="navbar-nav-right">
+                      <a class="nav-item nav-link active" href="#">
+                          <i class="material-icons">account_circle
+                          </i>
+                          Profile
+                          <span class="sr-only">(current)</span>
+                      </a>
+                  </span>
+              </div>
+          </nav>
+          <!--Content for pages inn here-->
+          <div id="content">
+              <!--Marketplace overview-->
+              <div id="dashboard-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Marketplace overview</h1>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="card">
+                              <span width="100%"><b>Lastest offer:</b> 05/02/2019 <span class="float-right"><b>Lastest trade:</b> 05/02/2019</span>
+                              </span>
+                              <hr>
+                              <div class="row align-items-center">
+                                  <div class="col-4">
+                                      <p class="center-text"><span class="bolder-text fade-gray-text">HIGHEST BID</span> <br>
+                                          <span class="bolder-text">$1750 </span>
+                                      </p>
+                                  </div>
+                                  <div class="col-4">
+                                      <p class="center-text"><span class="bolder-text fade-gray-text">WINES ON  MARKET</span> <br>
+                                          <span class="bolder-text">1500 </span>
+                                      </p>
+                                  </div>
+                                  <div class="col-4">
+                                      <p class="center-text"><span class="bolder-text fade-gray-text">TOTAL QUANTITY</span> <br>
+                                          <span class="bolder-text">20467 </span>
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <div class="card">
+                              <span width="100%"><b>Last 12 months</b>
+                              </span>
+                              <hr>
+                              <div class="row align-items-center">
+                                  <div class="col-4">
+                                      <p class="center-text"><span class="bolder-text fade-gray-text">OFFERS</span> <br>
+                                          <span class="bolder-text">1768 </span>
+                                      </p>
+                                  </div>
+                                  <div class="col-4"><p class="center-text"><span class="bolder-text fade-gray-text">BIDS</span> <br>
+                                      <span class="bolder-text">3478 </span>
+                                  </p>
+                                  </div>
+                                  <div class="col-4"><p class="center-text"><span class="bolder-text fade-gray-text">QUANTITY</span> <br>
+                                      <span class="bolder-text">10347 </span>
+                                  </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Last wines added to the platform-->
+                  <div class="row">
+                      <div class="col-12 col-md-12">
+                          <div class="card">
+                              <h2>
+                                  Newest tokenized wine on the platform
+                              </h2>
+                              <table>
+                                  <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Price </span></th>
+                                  <tr>
+                                      <td>Name of brand</td>
+                                      <td>Name of wine</td>
+                                      <td>$100</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of brand</td>
+                                      <td>Name of wine</td>
+                                      <td>$100</td></tr>
+                                  <tr>
+                                      <td>Name of brand</td>
+                                      <td>Name of wine</td>
+                                      <td>$100</td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Users wine cellar-->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <h2>
+                                  My cellar <span style="font-size:0.9rem; font-weight:normal; margin-left:1.5rem;"><span class="bolder-text">500</span> Tokenized units <span class="bolder-text">Total token value:</span> $10000 </span>
+                              </h2>
+                              <table>
+                                  <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Token ID </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Token value </span></th>
+                                  <tr>
+                                      <td>Name of wine</td>
+                                      <td>1</td>
+                                      <td>$100</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of wine</td>
+                                      <td>2</td>
+                                      <td>$100</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of wine</td>
+                                      <td>3</td>
+                                      <td>$100</td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+            </div><!--End dashboard page-->
+              <div id="create-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Create</h1>
+                      </div>
+                  </div>
+                      <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                              <a id="create-bottle-info-tab" class="nav-link active" href="#">Create bottle info</a>
+                          </li>
+                          <li class="nav-item">
+                              <a id="create-bottle-tab" class="nav-link" href="#">Create bottle</a>
+                          </li>
+                          <li class="nav-item">
+                              <a id="create-stock-tab" class="nav-link" href="#">Create stock</a>
+                          </li>
+                      </ul>
+                  <div class="create-form-wrapper" id="create-bottle-info-form">
+                      <div class="form-inline my-2 my-lg-4">
+                          <input id="create-bottle-info-search" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                          <small class="form-text text-muted">Search producer/brand/wine for auto-fill the form</small>
+                      </div>
+                      <form>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-brand" aria-describedby="brand" placeholder="Brand">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-winename" aria-describedby="wine name" placeholder="Wine name">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-producer" aria-describedby="producer" placeholder="Producer">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name">
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-appellation" aria-describedby="appellation" placeholder="Appellation">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-designation" aria-describedby="designation" placeholder="Designation">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-subbrand" aria-describedby="sub brand information" placeholder="Sub brand information">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-info-form-type">
+                                      <option class="fade-gray-text">Red/White</option>
+                                      <option>Red</option>
+                                      <option>White</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-info-form-grape">
+                                      <option class="fade-gray-text">Grape varieties</option>
+                                      <option>Cabernet Franc</option>
+                                      <option>Cabernet Sauvignon</option>
+                                      <option>Carménère</option>
+                                      <option>Chardonnay</option>
+                                      <option>Gewürztraminer</option>
+                                      <option>Grenache</option>
+                                      <option>Malbec</option>
+                                      <option>Merlot</option>
+                                      <option>Muscat Ottonel</option>
+                                      <option>Nebbiolo</option>
+                                      <option>Pinotage</option>
+                                      <option>Pinot Grigio</option>
+                                      <option>Pinot Noir</option>
+                                      <option>Riesling</option>
+                                      <option>Sauvignon Blanc</option>
+                                      <option>Sémillon</option>
+                                      <option>Shiraz / Syrah</option>
+                                      <option>Tempranillo</option>
+                                      <option>Viognier</option>
+                                      <option>Zinfandel</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-year" aria-describedby="year" placeholder="Year">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-info-form-bottleunit">
+                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
+                                      <option>350 ml</option>
+                                      <option>750 ml</option>
+                                      <option>1000 ml</option>
+                                      <option>1500 ml</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-price" aria-describedby="price" placeholder="Price">
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-info-form-classification">
+                                      <option class="fade-gray-text">classification</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary float-right">Add</button>
+                      </form>
+                  </div>
+                  <div class="create-form-wrapper" id="create-bottle-form">
+                      <div class="form-group row">
+                          <div class="col-12 col-md-3">
+                              <select class="form-control" id="create-bottle-form-selectbottle">
+                                  <option class="fade-gray-text">Select bottle</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                              </select>
+                          </div>
+                      </div>
+                      <form>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-brand" aria-describedby="brand" placeholder="Brand" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-winename" aria-describedby="wine name" placeholder="Wine name" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-producer" aria-describedby="producer" placeholder="Producer" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-appellation" aria-describedby="appellation" placeholder="Appellation" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-designation" aria-describedby="designation" placeholder="Designation" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-subbrand" aria-describedby="sub brand information" placeholder="Sub brand information" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-form-type" disabled>
+                                      <option class="fade-gray-text">Red/White</option>
+                                      <option>Red</option>
+                                      <option>White</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-form-grape" disabled>
+                                      <option class="fade-gray-text">Grape varieties</option>
+                                      <option>Cabernet Franc</option>
+                                      <option>Cabernet Sauvignon</option>
+                                      <option>Carménère</option>
+                                      <option>Chardonnay</option>
+                                      <option>Gewürztraminer</option>
+                                      <option>Grenache</option>
+                                      <option>Malbec</option>
+                                      <option>Merlot</option>
+                                      <option>Muscat Ottonel</option>
+                                      <option>Nebbiolo</option>
+                                      <option>Pinotage</option>
+                                      <option>Pinot Grigio</option>
+                                      <option>Pinot Noir</option>
+                                      <option>Riesling</option>
+                                      <option>Sauvignon Blanc</option>
+                                      <option>Sémillon</option>
+                                      <option>Shiraz / Syrah</option>
+                                      <option>Tempranillo</option>
+                                      <option>Viognier</option>
+                                      <option>Zinfandel</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-bottle-form-year" aria-describedby="year" placeholder="Year" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-form-bottleunit" disabled>
+                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
+                                      <option>350 ml</option>
+                                      <option>750 ml</option>
+                                      <option>1000 ml</option>
+                                      <option>1500 ml</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-bottle-form-classification" disabled>
+                                      <option class="fade-gray-text">classification</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3 offset-md-9 ">
+                                  <input type="text" class="form-control float-right" id="create-bottle-form-price" aria-describedby="price" placeholder="Set bottle price">
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary float-right">Create bottle</button>
+                      </form>
+                  </div>
+                  <div class="create-form-wrapper" id="create-stock-form">
+                      <div class="form-group row">
+                          <div class="col-12 col-md-3">
+                              <select class="form-control" id="create-stock-form-selectbottle">
+                                  <option class="fade-gray-text">Select bottle</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                              </select>
+                          </div>
+                      </div>
+                      <form>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-brand" aria-describedby="brand" placeholder="Brand" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-winename" aria-describedby="wine name" placeholder="Wine name" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-producer" aria-describedby="producer" placeholder="Producer" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-appellation" aria-describedby="appellation" placeholder="Appellation" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-designation" aria-describedby="designation" placeholder="Designation" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-subbrand" aria-describedby="sub brand information" placeholder="Sub brand information" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-stock-form-type" disabled>
+                                      <option class="fade-gray-text">Red/White</option>
+                                      <option>Red</option>
+                                      <option>White</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-stock-form-grape" disabled>
+                                      <option class="fade-gray-text">Grape varieties</option>
+                                      <option>Cabernet Franc</option>
+                                      <option>Cabernet Sauvignon</option>
+                                      <option>Carménère</option>
+                                      <option>Chardonnay</option>
+                                      <option>Gewürztraminer</option>
+                                      <option>Grenache</option>
+                                      <option>Malbec</option>
+                                      <option>Merlot</option>
+                                      <option>Muscat Ottonel</option>
+                                      <option>Nebbiolo</option>
+                                      <option>Pinotage</option>
+                                      <option>Pinot Grigio</option>
+                                      <option>Pinot Noir</option>
+                                      <option>Riesling</option>
+                                      <option>Sauvignon Blanc</option>
+                                      <option>Sémillon</option>
+                                      <option>Shiraz / Syrah</option>
+                                      <option>Tempranillo</option>
+                                      <option>Viognier</option>
+                                      <option>Zinfandel</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control" id="create-stock-form-year" aria-describedby="year" placeholder="Year" disabled>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-stock-form-bottleunit" disabled>
+                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
+                                      <option>350 ml</option>
+                                      <option>750 ml</option>
+                                      <option>1000 ml</option>
+                                      <option>1500 ml</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <select class="form-control" id="create-stock-form-classification" disabled>
+                                      <option class="fade-gray-text">classification</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-12 col-md-3 offset-md-6">
+                                  <input type="text" class="form-control float-right" id="create-stock-form-bottlenumber" aria-describedby="number of units" placeholder="Number of units">
+                              </div>
+                              <div class="col-12 col-md-3">
+                                  <input type="text" class="form-control float-right" id="create-stock-form-price" aria-describedby="price" placeholder="Set stock price">
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary float-right">Create stock</button>
+                      </form>
+                  </div>
+                  <br><br>
+                  <hr>
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <h2>
+                                  Tokenize
+                              </h2>
+                              <table>
+                                  <tr>
+                                  <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Price </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Bottle/Stock </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Tokenized </span></th>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Brand</td>
+                                      <td>$1200</td>
+                                      <td>Stock</td>
+                                      <td>[ ]</td>
+                                  </tr>
+                              </table>
+                              <div class="row">
+                                  <div class="col-12 col-md-3 offset-md-9">
+                                    <button type="button" class="btn btn-primary float-right">Tokenize</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="buy-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Buy</h1>
+                      </div>
+                  </div>
+                  <form class="form-inline row">
+                      <div class="form-group col-12 col-md-3 offset-md-9">
+                          <input id="buy-search" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                          <button type="button" class="btn btn-primary mb-2">Go</button>
+                      </div>
+                  </form>
+                  <br><br>
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <table>
+                                  <tr>
+                                      <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Price </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Type </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Actions </span></th>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$1200</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">View details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$150</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">View details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$80</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">View details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$100</td>
+                                      <td>White</td>
+                                      <td><a href="#" class="details-link">View details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$90</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">View details</a></td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="sell-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Offers</h1>
+                      </div>
+                  </div>
+                  <br><br>
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <table>
+                                          <tr>
+                                              <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Asking price </span></th>
+                                              <th><span class="bolder-text fade-gray-text">From </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Offer </span></th>
+                                          </tr>
+                                          <tr>
+                                              <td>Name of Brand</td>
+                                              <td>Name of Wine</td>
+                                              <td>$1200</td>
+                                              <td>Some name</td>
+                                              <td>$1250</td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+                              <div class="row justify-content-center center-text offer-links-row">
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Reject</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Details</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Counter offer</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Accept</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--offer 2-->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <table>
+                                          <tr>
+                                              <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Asking price </span></th>
+                                              <th><span class="bolder-text fade-gray-text">From </span></th>
+                                              <th><span class="bolder-text fade-gray-text">Offer </span></th>
+                                          </tr>
+                                          <tr>
+                                              <td>Name of Brand</td>
+                                              <td>Name of Wine</td>
+                                              <td>$100</td>
+                                              <td>Some name</td>
+                                              <td>$105</td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                              </div>
+                              <div class="row justify-content-center center-text offer-links-row">
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Reject</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Details</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Counter offer</a>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                      <a href="#">Accept</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div><!--end offer 2-->
+              </div>
+              <div id="analrep-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Analysis/reporting</h1>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                              <span>Today's highest offer: <span class="bolder-text">$1200</span></span>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                              <span>Total wines on market: <span class="bolder-text">8542</span></span>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                              <span>Average value (all wines): <span class="bolder-text">$120</span></span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                            <div id="chart_month"></div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                              <div id="redwhitechart"></div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                          <div class="card center-text">
+                              <div id="chart_country"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <!--Add table with data from date to date and category-->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="tracktrace-page">
+                  <div class="row">
+                      <div class="col">
+                          <h1>Track & Trace</h1>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 col-md-8">
+                          <div class="card">
+                              <table>
+                                  <tr>
+                                      <th><span class="bolder-text fade-gray-text">Brand </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Price </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Type </span></th>
+                                      <th><span class="bolder-text fade-gray-text">Actions </span></th>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$1200</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">Track details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$150</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">Track details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$80</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">Track details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$100</td>
+                                      <td>White</td>
+                                      <td><a href="#" class="details-link">Track details</a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Name of Brand</td>
+                                      <td>Name of Wine</td>
+                                      <td>$90</td>
+                                      <td>Red</td>
+                                      <td><a href="#" class="details-link">Track details</a></td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                          <div class="card">
+                              <div class="row">
+                                  <div class="col">
+                                      <h2>Tracking</h2>
+                                  </div>
+                              </div>
+                              <!-- Timeline -->
+                              <ul class="timeline">
+                                  <li class="timeline-item timeline-item-blue wiv-bg-blue rounded ml-3 p-4 shadow">
+                                      <div class="timeline-arrow timeline-arrow-blue"></div>
+                                      <h2 class="h5 mb-0">Trader</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Expected: 21 April, 2019</span>
+                                      <p class="text-small mt-2 font-weight-light"> </p>
+                                  </li>
+                                  <li class="timeline-item timeline-item-orange wiv-bg-orange rounded ml-3 p-4 shadow">
+                                      <div class="timeline-arrow timeline-arrow-orange"></div>
+                                      <h2 class="h5 mb-0">Title of section 2</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Expected: 5 April, 2019</span>
+                                      <p class="text-small mt-2 font-weight-light"></p>
+                                  </li>
+                                  <li class="timeline-item timeline-item-green wiv-bg-green rounded ml-3 p-4 shadow">
+                                      <div class="timeline-arrow timeline-arrow-green"></div>
+                                      <h2 class="h5 mb-0">Title of section 3</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 18 March, 2019</span>
+                                      <p class="text-small mt-2 font-weight-light"></p>
+                                  </li>
+                                  <li class="timeline-item timeline-item-green wiv-bg-green rounded ml-3 p-4 shadow">
+                                      <div class="timeline-arrow timeline-arrow-green"></div>
+                                      <h2 class="h5 mb-0">Title of section 4</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 10 March, 2019</span>
+                                      <p class="text-small mt-2 font-weight-light"></p>
+                                  </li>
+                              </ul><!-- End -->
+                              <hr>
+                              <span style="padding:0.8rem;">
+                                  <span class="bolder-text">Negociant</span><br>
+                                  Status: Waiting, next in line<br>
+                                  Expected: 5 April, 2019<br>
+                                  Address: Street, City, Code
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+
+</body>
+</html>
+
