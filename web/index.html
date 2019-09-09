@@ -228,9 +228,17 @@
                           </li>
                       </ul>
                   <div class="create-form-wrapper" id="create-bottle-info-form">
-                      <div class="form-inline my-2 my-lg-4">
-                          <input id="create-bottle-info-search" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
-                          <small class="form-text text-muted">Search producer/brand/wine for auto-fill the form</small>
+                      <div class="form-group row">
+                          <div class="col-12 col-md-3">
+                              <select class="form-control" id="create-bottle-info-form-selectbottle">
+                                  <option class="fade-gray-text">Select bottle</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                                  <option>Brand - wine - year - bottle unit - bottle ID</option>
+                              </select>
+                          </div>
                       </div>
                       <form>
                           <div class="form-group row">
@@ -244,7 +252,7 @@
                                   <input type="text" class="form-control" id="create-bottle-info-form-producer" aria-describedby="producer" placeholder="Producer">
                               </div>
                               <div class="col-12 col-md-3">
-                                  <input type="text" class="form-control" id="create-bottle-info-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name">
+                                  <input type="text" class="form-control" id="create-bottle-info-form-vineyard" aria-describedby="vineyard" placeholder="Vineyard name">
                               </div>
                           </div>
                           <div class="form-group row">
@@ -292,19 +300,19 @@
                                   </select>
                               </div>
                               <div class="col-12 col-md-3">
-                                  <input type="text" class="form-control" id="create-bottle-info-form-year" aria-describedby="year" placeholder="Year">
+                                  <input type="number" class="form-control" id="create-bottle-info-form-year" aria-describedby="year" placeholder="Year">
                               </div>
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-info-form-bottleunit">
                                       <option class="fade-gray-text">Bottle Unit (ml)</option>
-                                      <option>350 ml</option>
-                                      <option>750 ml</option>
-                                      <option>1000 ml</option>
-                                      <option>1500 ml</option>
+                                      <option>350</option>
+                                      <option>750</option>
+                                      <option>1000</option>
+                                      <option>1500</option>
                                   </select>
                               </div>
                               <div class="col-12 col-md-3">
-                                  <input type="text" class="form-control" id="create-bottle-info-form-price" aria-describedby="price" placeholder="Price">
+                                  <input type="number" class="form-control" id="create-bottle-info-form-price" aria-describedby="price" placeholder="Price">
                               </div>
                           </div>
                           <div class="form-group row">
@@ -319,7 +327,7 @@
                                   </select>
                               </div>
                           </div>
-                          <button type="submit" class="btn btn-primary float-right">Add</button>
+                          <button type="submit" class="btn btn-primary float-right" id="create-bottle-info-form-submit" >Add</button>
                       </form>
                   </div>
                   <div class="create-form-wrapper" id="create-bottle-form">
@@ -347,7 +355,7 @@
                                   <input type="text" class="form-control" id="create-bottle-form-producer" aria-describedby="producer" placeholder="Producer" disabled>
                               </div>
                               <div class="col-12 col-md-3">
-                                  <input type="text" class="form-control" id="create-bottle-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name" disabled>
+                                  <input type="text" class="form-control" id="create-bottle-form-vineyard" aria-describedby="vineyard" placeholder="Vineyard name" disabled>
                               </div>
                           </div>
                           <div class="form-group row">
@@ -400,10 +408,10 @@
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-form-bottleunit" disabled>
                                       <option class="fade-gray-text">Bottle Unit (ml)</option>
-                                      <option>350 ml</option>
-                                      <option>750 ml</option>
-                                      <option>1000 ml</option>
-                                      <option>1500 ml</option>
+                                      <option>350</option>
+                                      <option>750</option>
+                                      <option>1000</option>
+                                      <option>1500</option>
                                   </select>
                               </div>
                               <div class="col-12 col-md-3">
@@ -422,7 +430,7 @@
                                   <input type="text" class="form-control float-right" id="create-bottle-form-price" aria-describedby="price" placeholder="Set bottle price">
                               </div>
                           </div>
-                          <button type="submit" class="btn btn-primary float-right">Create bottle</button>
+                          <button type="submit" class="btn btn-primary float-right" id="create-bottle-form-submit">Create bottle</button>
                       </form>
                   </div>
                   <div class="create-form-wrapper" id="create-stock-form">
@@ -450,7 +458,7 @@
                                   <input type="text" class="form-control" id="create-stock-form-producer" aria-describedby="producer" placeholder="Producer" disabled>
                               </div>
                               <div class="col-12 col-md-3">
-                                  <input type="text" class="form-control" id="create-stock-form-vinyard" aria-describedby="vinyard" placeholder="Vinyard name" disabled>
+                                  <input type="text" class="form-control" id="create-stock-form-vineyard" aria-describedby="vineyard" placeholder="Vineyard name" disabled>
                               </div>
                           </div>
                           <div class="form-group row">
@@ -503,10 +511,10 @@
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-stock-form-bottleunit" disabled>
                                       <option class="fade-gray-text">Bottle Unit (ml)</option>
-                                      <option>350 ml</option>
-                                      <option>750 ml</option>
-                                      <option>1000 ml</option>
-                                      <option>1500 ml</option>
+                                      <option>350</option>
+                                      <option>750</option>
+                                      <option>1000</option>
+                                      <option>1500</option>
                                   </select>
                               </div>
                               <div class="col-12 col-md-3">
@@ -528,7 +536,7 @@
                                   <input type="text" class="form-control float-right" id="create-stock-form-price" aria-describedby="price" placeholder="Set stock price">
                               </div>
                           </div>
-                          <button type="submit" class="btn btn-primary float-right">Create stock</button>
+                          <button type="submit" class="btn btn-primary float-right" id="create-stock-form-submit">Create stock</button>
                       </form>
                   </div>
                   <br><br>
@@ -539,7 +547,7 @@
                               <h2>
                                   Tokenize
                               </h2>
-                              <table>
+                              <table id="tokenize-table">
                                   <tr>
                                   <th><span class="bolder-text fade-gray-text">Brand </span></th>
                                   <th><span class="bolder-text fade-gray-text">Wine </span></th>
@@ -547,17 +555,10 @@
                                   <th><span class="bolder-text fade-gray-text">Bottle/Stock </span></th>
                                   <th><span class="bolder-text fade-gray-text">Tokenized </span></th>
                                   </tr>
-                                  <tr>
-                                      <td>Name of Brand</td>
-                                      <td>Name of Brand</td>
-                                      <td>$1200</td>
-                                      <td>Stock</td>
-                                      <td>[ ]</td>
-                                  </tr>
                               </table>
                               <div class="row">
                                   <div class="col-12 col-md-3 offset-md-9">
-                                    <button type="button" class="btn btn-primary float-right">Tokenize</button>
+                                    <button type="button" class="btn btn-primary float-right" id="tokenize-submit">Tokenize</button>
                                   </div>
                               </div>
                           </div>
@@ -840,17 +841,17 @@
                                   </li>
                                   <li class="timeline-item timeline-item-orange wiv-bg-orange rounded ml-3 p-4 shadow">
                                       <div class="timeline-arrow timeline-arrow-orange"></div>
-                                      <h2 class="h5 mb-0">Title of section 2</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Expected: 5 April, 2019</span>
+                                      <h2 class="h5 mb-0">Negociant</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Expected: 5 April, 2019</span>
                                       <p class="text-small mt-2 font-weight-light"></p>
                                   </li>
                                   <li class="timeline-item timeline-item-green wiv-bg-green rounded ml-3 p-4 shadow">
                                       <div class="timeline-arrow timeline-arrow-green"></div>
-                                      <h2 class="h5 mb-0">Title of section 3</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 18 March, 2019</span>
+                                      <h2 class="h5 mb-0">Courtier</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 18 March, 2019</span>
                                       <p class="text-small mt-2 font-weight-light"></p>
                                   </li>
                                   <li class="timeline-item timeline-item-green wiv-bg-green rounded ml-3 p-4 shadow">
                                       <div class="timeline-arrow timeline-arrow-green"></div>
-                                      <h2 class="h5 mb-0">Title of section 4</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 10 March, 2019</span>
+                                      <h2 class="h5 mb-0">Chateau</h2><span class="small"><i class="fa fa-clock-o mr-1"></i>Sent: 10 March, 2019</span>
                                       <p class="text-small mt-2 font-weight-light"></p>
                                   </li>
                               </ul><!-- End -->

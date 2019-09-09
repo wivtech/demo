@@ -1,6 +1,14 @@
 google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawMaterial);
 
+//on resize
+$(window).resize(function(){
+	  	drawMaterial();
+	  	drawChartRedWhite();
+	  	drawMaterialCountry();
+	});
+
+
+google.charts.setOnLoadCallback(drawMaterial);
 function drawMaterial() {
       var data = google.visualization.arrayToDataTable([
         ['Wines', "Wines per month"],
