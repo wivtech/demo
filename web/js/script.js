@@ -7,7 +7,6 @@ $(window).resize(function(){
 	  	drawMaterialCountry();
 	});
 
-
 google.charts.setOnLoadCallback(drawMaterial);
 function drawMaterial() {
       var data = google.visualization.arrayToDataTable([

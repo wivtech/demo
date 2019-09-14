@@ -105,7 +105,7 @@
                   <div class="row">
                       <div class="col-12 col-md-6">
                           <div class="card">
-                              <span width="100%"><b>Lastest offer:</b> 05/02/2019 <span class="float-right"><b>Lastest trade:</b> 05/02/2019</span>
+                              <span width="100%"><b>Latest offer:</b> 05/02/2019 <span class="float-right"><b>Latest trade:</b> 05/02/2019</span>
                               </span>
                               <hr>
                               <div class="row align-items-center">
@@ -150,6 +150,33 @@
                           </div>
                       </div>
                   </div>
+                  <!--Currency rates-->
+                  <div class="row">
+                      <div class="col-12 col-md-12">
+                          <div class="card">
+                              <h2>
+                                  Currency market
+                              </h2>
+
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <select class="form-control" style="width: 50%;">
+                                              <option class="fade-gray-text">Select currency</option>
+                                              <option>EUR</option>
+                                              <option>USD</option>
+                                              <option>GBP</option>
+                                          </select>
+                                      </td>
+                                      <td>EUR/USD: <span style="color: green">1.14</span></td>
+                                      <td>EUR/GBP: <span style="color: green">1.02</span></td>
+                                      <td>EUR/JPY: <span style="color: red">0.94</span></td>
+                                      <td>EUR/CHF: <span style="color: red">0.75</span></td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
                   <!--Last wines added to the platform-->
                   <div class="row">
                       <div class="col-12 col-md-12">
@@ -160,20 +187,29 @@
                               <table>
                                   <th><span class="bolder-text fade-gray-text">Brand </span></th>
                                   <th><span class="bolder-text fade-gray-text">Wine </span></th>
+                                  <th class="center-text"><span class="bolder-text fade-gray-text">Units</span></th>
                                   <th><span class="bolder-text fade-gray-text">Price </span></th>
+                                  <th><span class="bolder-text fade-gray-text">Location <i class="material-icons bolder-text">flag</i></span></th>
                                   <tr>
                                       <td>Name of brand</td>
                                       <td>Name of wine</td>
+                                      <td class="center-text">1</td>
                                       <td>$100</td>
+                                      <td><img src="france-flag-32.png"> <img src="maps-32.png"></td>
                                   </tr>
                                   <tr>
                                       <td>Name of brand</td>
                                       <td>Name of wine</td>
-                                      <td>$100</td></tr>
+                                      <td class="center-text">6</td>
+                                      <td>$1200</td>
+                                      <td><img src="france-flag-32.png"> <img src="maps-32.png"></td>
+                                  </tr>
                                   <tr>
                                       <td>Name of brand</td>
                                       <td>Name of wine</td>
-                                      <td>$100</td>
+                                      <td class="center-text">12</td>
+                                      <td>$1200</td>
+                                      <td><img src="france-flag-32.png"> <img src="maps-32.png"> </td>
                                   </tr>
                               </table>
                           </div>
@@ -189,21 +225,25 @@
                               <table>
                                   <th><span class="bolder-text fade-gray-text">Wine </span></th>
                                   <th><span class="bolder-text fade-gray-text">Token ID </span></th>
+                                  <th class="center-text"><span class="bolder-text fade-gray-text">Units</span></th>
                                   <th><span class="bolder-text fade-gray-text">Token value </span></th>
                                   <tr>
                                       <td>Name of wine</td>
                                       <td>1</td>
-                                      <td>$100</td>
+                                      <td class="center-text">6</td>
+                                      <td>$800</td>
                                   </tr>
                                   <tr>
                                       <td>Name of wine</td>
                                       <td>2</td>
-                                      <td>$100</td>
+                                      <td class="center-text">1</td>
+                                      <td>$75</td>
                                   </tr>
                                   <tr>
                                       <td>Name of wine</td>
                                       <td>3</td>
-                                      <td>$100</td>
+                                      <td class="center-text">12</td>
+                                      <td>$1200</td>
                                   </tr>
                               </table>
                           </div>
@@ -218,13 +258,16 @@
                   </div>
                       <ul class="nav nav-tabs">
                           <li class="nav-item">
-                              <a id="create-bottle-info-tab" class="nav-link active" href="#">Create bottle info</a>
+                              <a id="create-bottle-info-tab" class="nav-link active" href="#">Create wine info</a>
                           </li>
                           <li class="nav-item">
-                              <a id="create-bottle-tab" class="nav-link" href="#">Create bottle</a>
+                              <a id="create-bottle-tab" class="nav-link" href="#">Create Token</a>
                           </li>
                           <li class="nav-item">
                               <a id="create-stock-tab" class="nav-link" href="#">Create stock</a>
+                          </li>
+                          <li class="nav-item">
+                              <a id="create-barrel-tab" class="nav-link" href="#">Create barrel</a>
                           </li>
                       </ul>
                   <div class="create-form-wrapper" id="create-bottle-info-form">
@@ -267,9 +310,12 @@
                               </div>
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-info-form-type">
-                                      <option class="fade-gray-text">Red/White</option>
+                                      <option class="fade-gray-text">Red/White/..</option>
                                       <option>Red</option>
                                       <option>White</option>
+                                      <option>Rosè</option>
+                                      <option>Champagne</option>
+                                      <option>Sparkling</option>
                                   </select>
                               </div>
                           </div>
@@ -304,18 +350,21 @@
                               </div>
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-info-form-bottleunit">
-                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
-                                      <option>350</option>
-                                      <option>750</option>
-                                      <option>1000</option>
-                                      <option>1500</option>
+                                      <option class="fade-gray-text">Bottle Size (L)</option>
+                                      <option>0.375</option>
+                                      <option>0.50</option>
+                                      <option>0.75</option>
+                                      <option>1.5</option>
+                                      <option>3.0</option>
+                                      <option>4.5</option>
+                                      <option>5.0</option>
+                                      <option>6.0</option>
+                                      <option>9.0</option>
+                                      <option>12.0</option>
+                                      <option>15.0</option>
+                                      <option>18.0</option>
                                   </select>
                               </div>
-                              <div class="col-12 col-md-3">
-                                  <input type="number" class="form-control" id="create-bottle-info-form-price" aria-describedby="price" placeholder="Price">
-                              </div>
-                          </div>
-                          <div class="form-group row">
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-info-form-classification">
                                       <option class="fade-gray-text">classification</option>
@@ -407,7 +456,7 @@
                               </div>
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-bottle-form-bottleunit" disabled>
-                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
+                                      <option class="fade-gray-text">Bottle Size (L)</option>
                                       <option>350</option>
                                       <option>750</option>
                                       <option>1000</option>
@@ -426,11 +475,24 @@
                               </div>
                           </div>
                           <div class="form-group row">
-                              <div class="col-12 col-md-3 offset-md-9 ">
+                              <div class="col-12 col-md-3 offset-md-6 ">
+                                  <select class="form-control" id="create-bottle-form-source" disabled>
+                                      <option class="fade-gray-text">SOURCE</option>
+                                      <option>Producer</option>
+                                      <option>Negociant</option>
+                                      <option>Importer</option>
+                                      <option>Broker</option>
+                                      <option>Merchant</option>
+                                      <option>Retailer</option>
+                                      <option>Restaurant</option>
+                                      <option>Private</option>
+                                  </select>
+                              </div>
+                              <div class="col-12 col-md-3 ">
                                   <input type="text" class="form-control float-right" id="create-bottle-form-price" aria-describedby="price" placeholder="Set bottle price">
                               </div>
                           </div>
-                          <button type="submit" class="btn btn-primary float-right" id="create-bottle-form-submit">Create bottle</button>
+                          <button type="submit" class="btn btn-primary float-right" id="create-bottle-form-submit">Create token</button>
                       </form>
                   </div>
                   <div class="create-form-wrapper" id="create-stock-form">
@@ -481,7 +543,7 @@
                           </div>
                           <div class="form-group row">
                               <div class="col-12 col-md-3">
-                                  <select class="form-control" id="create-stock-form-grape" disabled>
+                                  <select class="form-control" id="create-stock-form-grape">
                                       <option class="fade-gray-text">Grape varieties</option>
                                       <option>Cabernet Franc</option>
                                       <option>Cabernet Sauvignon</option>
@@ -510,7 +572,7 @@
                               </div>
                               <div class="col-12 col-md-3">
                                   <select class="form-control" id="create-stock-form-bottleunit" disabled>
-                                      <option class="fade-gray-text">Bottle Unit (ml)</option>
+                                      <option class="fade-gray-text">Bottle Size (L)</option>
                                       <option>350</option>
                                       <option>750</option>
                                       <option>1000</option>
@@ -743,17 +805,17 @@
                   </div>
                   <div class="row">
                       <div class="col-12 col-md-4">
-                          <div class="card center-text">
+                          <div class="card chart center-text">
                             <div id="chart_month"></div>
                           </div>
                       </div>
                       <div class="col-12 col-md-4">
-                          <div class="card center-text">
+                          <div class="card chart center-text">
                               <div id="redwhitechart"></div>
                           </div>
                       </div>
                       <div class="col-12 col-md-4">
-                          <div class="card center-text">
+                          <div class="card chart center-text">
                               <div id="chart_country"></div>
                           </div>
                       </div>
